@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Supermercado One';
+    background: 
+    linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+#content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator{
+    border: 2px solid rgb(122, 122, 122);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 25.3rem;
+    width: 18.3rem;
+    background-color: rgba(104, 104, 104, 0.25);
+}
+
+#input-container{
+    padding-right: 8px;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: 2px solid rgb(122, 122, 122);
+}
+
+#input{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2rem;
+}
+
+#answer{
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3rem;
+}
+
+#digits-container{
+    width: 18rem;
+    height: 18rem;
+    display: grid;
+    grid-template-areas:
+    'clear backSpace backSpace divide'
+    'nine eight seven multiply'
+    'six five four minus'
+    'three two one plus'
+    'zero zero decimal equals';
+    justify-content: center;
+}
+
+.digits{
+    user-select: none;
+    border: 1px solid rgba(194, 194, 194, 0.5);
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(224, 224, 224, 0.5);
+    transition: .1s;
+}
+
+.digits:hover{
+    background-color: rgba(194, 194, 194, 0.5);
+}
+
+#clear{
+    width: 4.5rem;
+    grid-area: clear;
+}
+#backspace{
+    padding-left: 4.6rem;
+    width: 9rem;
+    grid-area: backSpace;
+}
+#divide{
+    width: 4.5rem;
+    grid-area: divide;
+}
+#nine{
+    width: 4.5rem;
+    grid-area: nine;
+}
+#eight{
+    width: 4.5rem;
+    grid-area: eight;
+}
+#seven{
+    width: 4.5rem;
+    grid-area: seven;
+}
+#multiply{
+    width: 4.5rem;
+    grid-area: multiply;
+}
+#six{
+    width: 4.5rem;
+    grid-area: six;
+}
+#five{
+    width: 4.5rem;
+    grid-area: five;
+}
+#four{
+    width: 4.5rem;
+    grid-area: four;
+}
+#minus{
+    width: 4.5rem;
+    grid-area: minus;
+}
+#three{
+    width: 4.5rem;
+    grid-area: three;
+}
+#two{
+    width: 4.5rem;
+    grid-area: two;
+}
+#one{
+    width: 4.5rem;
+    grid-area: one;
+}
+#plus{
+    width: 4.5rem;
+    grid-area: plus;
+}
+#zero{
+    padding-left: 4.6rem;
+    width: 9rem;
+    grid-area: zero;
+}
+#decimal{
+    width: 4.5rem;
+    grid-area: decimal;
+}
+#equals{
+    width: 4.5rem;
+    grid-area: equals;
+}
