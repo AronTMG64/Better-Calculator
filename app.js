@@ -262,6 +262,10 @@ zero.addEventListener('click', function () {
 })
 
 decimal.addEventListener('click', function () {
+    if (answerValue != '') {
+        clearFunction()
+    }
+
     if (calculationMethod == '') {
         if (firstInputValue == '') firstInputValue += '0.'
         if (firstInputValue.includes('.') == false) firstInputValue += '.';
