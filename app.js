@@ -35,11 +35,7 @@ function clearFunction() {
     answerValue = '';
 }
 
-clear.addEventListener('click', function () {
-    clearFunction()
-})
-
-backSpace.addEventListener('click', function () {
+function backSpaceFunction() {
     if (secondInputValue != '') {
         secondInputValue = secondInputValue.substring(0, secondInputValue.length - 1);
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
@@ -51,9 +47,9 @@ backSpace.addEventListener('click', function () {
         firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
     }
-})
+}
 
-divide.addEventListener('click', function () {
+function divideFunction() {
     if (firstInputValue != '') {
         if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
             firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
@@ -69,37 +65,9 @@ divide.addEventListener('click', function () {
             input.innerText = firstInputValue + calculationMethod + secondInputValue;
         }
     }
-})
+}
 
-nine.addEventListener('click', function () {
-    if (answerValue != '') {
-        clearFunction()
-    }
-
-    if (calculationMethod == '') {
-        firstInputValue += 9
-        input.innerText = firstInputValue + secondInputValue;
-    } else {
-        secondInputValue += 9
-        input.innerText = firstInputValue + calculationMethod + secondInputValue;
-    }
-})
-
-eight.addEventListener('click', function () {
-    if (answerValue != '') {
-        clearFunction()
-    }
-
-    if (calculationMethod == '') {
-        firstInputValue += 8
-        input.innerText = firstInputValue + secondInputValue;
-    } else {
-        secondInputValue += 8
-        input.innerText = firstInputValue + calculationMethod + secondInputValue;
-    }
-})
-
-seven.addEventListener('click', function () {
+function sevenFunction() {
     if (answerValue != '') {
         clearFunction()
     }
@@ -111,9 +79,37 @@ seven.addEventListener('click', function () {
         secondInputValue += 7
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
     }
-})
+}
 
-multiply.addEventListener('click', function () {
+function eightFunction() {
+    if (answerValue != '') {
+        clearFunction()
+    }
+
+    if (calculationMethod == '') {
+        firstInputValue += 8
+        input.innerText = firstInputValue + secondInputValue;
+    } else {
+        secondInputValue += 8
+        input.innerText = firstInputValue + calculationMethod + secondInputValue;
+    }
+}
+
+function nineFunction() {
+    if (answerValue != '') {
+        clearFunction()
+    }
+
+    if (calculationMethod == '') {
+        firstInputValue += 9
+        input.innerText = firstInputValue + secondInputValue;
+    } else {
+        secondInputValue += 9
+        input.innerText = firstInputValue + calculationMethod + secondInputValue;
+    }
+}
+
+function multiplyFunction() {
     if (firstInputValue != '') {
         if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
             firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
@@ -129,37 +125,9 @@ multiply.addEventListener('click', function () {
             input.innerText = firstInputValue + calculationMethod + secondInputValue;
         }
     }
-})
+}
 
-six.addEventListener('click', function () {
-    if (answerValue != '') {
-        clearFunction()
-    }
-
-    if (calculationMethod == '') {
-        firstInputValue += 6
-        input.innerText = firstInputValue + secondInputValue;
-    } else {
-        secondInputValue += 6
-        input.innerText = firstInputValue + calculationMethod + secondInputValue;
-    }
-})
-
-five.addEventListener('click', function () {
-    if (answerValue != '') {
-        clearFunction()
-    }
-
-    if (calculationMethod == '') {
-        firstInputValue += 5
-        input.innerText = firstInputValue + secondInputValue;
-    } else {
-        secondInputValue += 5
-        input.innerText = firstInputValue + calculationMethod + secondInputValue;
-    }
-})
-
-four.addEventListener('click', function () {
+function fourFunction() {
     if (answerValue != '') {
         clearFunction()
     }
@@ -171,9 +139,37 @@ four.addEventListener('click', function () {
         secondInputValue += 4
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
     }
-})
+}
 
-minus.addEventListener('click', function () {
+function fiveFunction() {
+    if (answerValue != '') {
+        clearFunction()
+    }
+
+    if (calculationMethod == '') {
+        firstInputValue += 5
+        input.innerText = firstInputValue + secondInputValue;
+    } else {
+        secondInputValue += 5
+        input.innerText = firstInputValue + calculationMethod + secondInputValue;
+    }
+}
+
+function sixFunction() {
+    if (answerValue != '') {
+        clearFunction()
+    }
+
+    if (calculationMethod == '') {
+        firstInputValue += 6
+        input.innerText = firstInputValue + secondInputValue;
+    } else {
+        secondInputValue += 6
+        input.innerText = firstInputValue + calculationMethod + secondInputValue;
+    }
+}
+
+function minusFunction() {
     if (firstInputValue != '') {
         if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
             firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
@@ -189,37 +185,9 @@ minus.addEventListener('click', function () {
             input.innerText = firstInputValue + calculationMethod + secondInputValue;
         }
     }
-})
+}
 
-three.addEventListener('click', function () {
-    if (answerValue != '') {
-        clearFunction()
-    }
-
-    if (calculationMethod == '') {
-        firstInputValue += 3
-        input.innerText = firstInputValue + secondInputValue;
-    } else {
-        secondInputValue += 3
-        input.innerText = firstInputValue + calculationMethod + secondInputValue;
-    }
-})
-
-two.addEventListener('click', function () {
-    if (answerValue != '') {
-        clearFunction()
-    }
-
-    if (calculationMethod == '') {
-        firstInputValue += 2
-        input.innerText = firstInputValue + secondInputValue;
-    } else {
-        secondInputValue += 2
-        input.innerText = firstInputValue + calculationMethod + secondInputValue;
-    }
-})
-
-one.addEventListener('click', function () {
+function oneFunction() {
     if (answerValue != '') {
         clearFunction()
     }
@@ -231,9 +199,37 @@ one.addEventListener('click', function () {
         secondInputValue += 1
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
     }
-})
+}
 
-plus.addEventListener('click', function () {
+function twoFunction() {
+    if (answerValue != '') {
+        clearFunction()
+    }
+
+    if (calculationMethod == '') {
+        firstInputValue += 2
+        input.innerText = firstInputValue + secondInputValue;
+    } else {
+        secondInputValue += 2
+        input.innerText = firstInputValue + calculationMethod + secondInputValue;
+    }
+}
+
+function threeFunction() {
+    if (answerValue != '') {
+        clearFunction()
+    }
+
+    if (calculationMethod == '') {
+        firstInputValue += 3
+        input.innerText = firstInputValue + secondInputValue;
+    } else {
+        secondInputValue += 3
+        input.innerText = firstInputValue + calculationMethod + secondInputValue;
+    }
+}
+
+function plusFunction() {
     if (firstInputValue != '') {
         if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
             firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
@@ -249,9 +245,9 @@ plus.addEventListener('click', function () {
             input.innerText = firstInputValue + calculationMethod + secondInputValue;
         }
     }
-})
+}
 
-zero.addEventListener('click', function () {
+function zeroFunction() {
     if (calculationMethod == '') {
         if (firstInputValue != '') firstInputValue += 0;
         input.innerText = firstInputValue + secondInputValue;
@@ -259,9 +255,9 @@ zero.addEventListener('click', function () {
         if (secondInputValue != '') secondInputValue += 0;
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
     }
-})
+}
 
-decimal.addEventListener('click', function () {
+function decimalFunction() {
     if (answerValue != '') {
         clearFunction()
     }
@@ -275,9 +271,9 @@ decimal.addEventListener('click', function () {
         if (secondInputValue.includes('.') == false) secondInputValue += '.';
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
     }
-})
+}
 
-equals.addEventListener('click', function () {
+function equalsFunction() {
     if (calculationMethod == '+') {
         answerValue = parseFloat(firstInputValue) + parseFloat(secondInputValue);
         answer.innerText = answerValue
@@ -297,4 +293,116 @@ equals.addEventListener('click', function () {
         answerValue = parseFloat(firstInputValue) / parseFloat(secondInputValue);
         answer.innerText = answerValue
     }
+}
+
+
+
+clear.addEventListener('click', function () {
+    clearFunction()
+})
+
+backSpace.addEventListener('click', function () {
+    backSpaceFunction()
+})
+
+divide.addEventListener('click', function () {
+    divideFunction()
+})
+
+seven.addEventListener('click', function () {
+    sevenFunction()
+})
+
+eight.addEventListener('click', function () {
+    eightFunction()
+})
+
+nine.addEventListener('click', function () {
+    nineFunction()
+})
+
+multiply.addEventListener('click', function () {
+    multiplyFunction()
+})
+
+four.addEventListener('click', function () {
+    fourFunction()
+})
+
+five.addEventListener('click', function () {
+    fiveFunction()
+})
+
+six.addEventListener('click', function () {
+    sixFunction()
+})
+
+minus.addEventListener('click', function () {
+    minusFunction()
+})
+
+one.addEventListener('click', function () {
+    oneFunction()
+})
+
+two.addEventListener('click', function () {
+    twoFunction()
+})
+
+three.addEventListener('click', function () {
+    threeFunction()
+})
+
+plus.addEventListener('click', function () {
+    plusFunction()
+})
+
+zero.addEventListener('click', function () {
+    zeroFunction()
+})
+
+decimal.addEventListener('click', function () {
+    decimalFunction()
+})
+
+equals.addEventListener('click', function () {
+    equalsFunction()
+})
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Delete') clearFunction()
+
+    if (e.key === 'Backspace') backSpaceFunction()
+
+    if (e.key === '/') divideFunction()
+
+    if (e.key === '7') sevenFunction()
+
+    if (e.key === '8') eightFunction()
+
+    if (e.key === '9') nineFunction()
+
+    if (e.key === '*') multiplyFunction()
+
+    if (e.key === '4') fourFunction()
+
+    if (e.key === '5') fiveFunction()
+
+    if (e.key === '6') sixFunction()
+
+    if (e.key === '-') minusFunction()
+
+    if (e.key === '1') oneFunction()
+
+    if (e.key === '2') twoFunction()
+
+    if (e.key === '3') threeFunction()
+
+    if (e.key === '+') plusFunction()
+
+    if (e.key === '0') zeroFunction()
+
+    if (e.key === ',') decimalFunction()
+
+    if (e.key === 'Enter') equalsFunction()
 })

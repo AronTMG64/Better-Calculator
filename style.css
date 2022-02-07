@@ -60,9 +60,9 @@ body{
     display: grid;
     grid-template-areas:
     'clear backSpace backSpace divide'
-    'nine eight seven multiply'
-    'six five four minus'
-    'three two one plus'
+    'seven eight nine multiply'
+    'four five six minus'
+    'one two three plus'
     'zero zero decimal equals';
     justify-content: center;
 }
