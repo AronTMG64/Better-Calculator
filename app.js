@@ -58,18 +58,30 @@ function backSpaceFunction() {
 
 function divideFunction() {
     if (firstInputValue != '') {
-        if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
-            firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
+        if (answerValue == '') {
+            if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
+                firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
+            }
+
+            if (secondInputValue != '') {
+                firstInputValue = (parseFloat(firstInputValue) / parseFloat(secondInputValue)).toString();
+                secondInputValue = '';
+                calculationMethod = '÷'
+                input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            } else {
+                calculationMethod = '÷'
+                input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            }
         }
 
-        if (secondInputValue != '') {
-            firstInputValue = (parseFloat(firstInputValue) / parseFloat(secondInputValue)).toString();
-            secondInputValue = '';
+        if (answerValue != '') {
+            firstInputValue = ''
+            secondInputValue = ''
+            firstInputValue = answerValue;
+            answerValue = ''
             calculationMethod = '÷'
-            input.innerText = firstInputValue + calculationMethod + secondInputValue;
-        } else {
-            calculationMethod = '÷'
-            input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            input.innerText = firstInputValue + calculationMethod;
+            answer.innerText = ''
         }
     }
 }
@@ -118,18 +130,30 @@ function nineFunction() {
 
 function multiplyFunction() {
     if (firstInputValue != '') {
-        if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
-            firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
+        if (answerValue == '') {
+            if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
+                firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
+            }
+
+            if (secondInputValue != '') {
+                firstInputValue = (parseFloat(firstInputValue) * parseFloat(secondInputValue)).toString();
+                secondInputValue = '';
+                calculationMethod = 'x'
+                input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            } else {
+                calculationMethod = 'x'
+                input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            }
         }
 
-        if (secondInputValue != '') {
-            firstInputValue = (parseFloat(firstInputValue) * parseFloat(secondInputValue)).toString();
-            secondInputValue = '';
+        if (answerValue != '') {
+            firstInputValue = ''
+            secondInputValue = ''
+            firstInputValue = answerValue;
+            answerValue = ''
             calculationMethod = 'x'
-            input.innerText = firstInputValue + calculationMethod + secondInputValue;
-        } else {
-            calculationMethod = 'x'
-            input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            input.innerText = firstInputValue + calculationMethod;
+            answer.innerText = ''
         }
     }
 }
@@ -178,18 +202,30 @@ function sixFunction() {
 
 function minusFunction() {
     if (firstInputValue != '') {
-        if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
-            firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
+        if (answerValue == '') {
+            if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
+                firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
+            }
+
+            if (secondInputValue != '') {
+                firstInputValue = (parseFloat(firstInputValue) - parseFloat(secondInputValue)).toString();
+                secondInputValue = '';
+                calculationMethod = '-'
+                input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            } else {
+                calculationMethod = '-'
+                input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            }
         }
 
-        if (secondInputValue != '') {
-            firstInputValue = (parseFloat(firstInputValue) - parseFloat(secondInputValue)).toString();
-            secondInputValue = '';
+        if (answerValue != '') {
+            firstInputValue = ''
+            secondInputValue = ''
+            firstInputValue = answerValue;
+            answerValue = ''
             calculationMethod = '-'
-            input.innerText = firstInputValue + calculationMethod + secondInputValue;
-        } else {
-            calculationMethod = '-'
-            input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            input.innerText = firstInputValue + calculationMethod;
+            answer.innerText = ''
         }
     }
 }
@@ -238,19 +274,31 @@ function threeFunction() {
 
 function plusFunction() {
     if (firstInputValue != '') {
-        if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
-            firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
+        if (answerValue == '') {
+            if (firstInputValue.includes('.', firstInputValue.length - 1) == true) {
+                firstInputValue = firstInputValue.substring(0, firstInputValue.length - 1)
+            }
+            if (secondInputValue != '') {
+                firstInputValue = (parseFloat(firstInputValue) + parseFloat(secondInputValue)).toString();
+                secondInputValue = '';
+                calculationMethod = '+'
+                input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            } else {
+                calculationMethod = '+'
+                input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            }
         }
 
-        if (secondInputValue != '') {
-            firstInputValue = (parseFloat(firstInputValue) + parseFloat(secondInputValue)).toString();
-            secondInputValue = '';
+        if (answerValue != '') {
+            firstInputValue = ''
+            secondInputValue = ''
+            firstInputValue = answerValue;
+            answerValue = ''
             calculationMethod = '+'
-            input.innerText = firstInputValue + calculationMethod + secondInputValue;
-        } else {
-            calculationMethod = '+'
-            input.innerText = firstInputValue + calculationMethod + secondInputValue;
+            input.innerText = firstInputValue + calculationMethod;
+            answer.innerText = ''
         }
+        
     }
 }
 
@@ -281,24 +329,26 @@ function decimalFunction() {
 }
 
 function equalsFunction() {
-    if (calculationMethod == '+') {
-        answerValue = parseFloat(firstInputValue) + parseFloat(secondInputValue);
-        answer.innerText = answerValue
-    }
+    if (secondInputValue != '') {
+        if (calculationMethod == '+') {
+            answerValue = (parseFloat(firstInputValue) + parseFloat(secondInputValue)).toString();
+            answer.innerText = answerValue
+        }
 
-    if (calculationMethod == '-') {
-        answerValue = parseFloat(firstInputValue) - parseFloat(secondInputValue);
-        answer.innerText = answerValue
-    }
+        if (calculationMethod == '-') {
+            answerValue = (parseFloat(firstInputValue) - parseFloat(secondInputValue)).toString();
+            answer.innerText = answerValue
+        }
 
-    if (calculationMethod == 'x') {
-        answerValue = parseFloat(firstInputValue) * parseFloat(secondInputValue);
-        answer.innerText = answerValue
-    }
+        if (calculationMethod == 'x') {
+            answerValue = (parseFloat(firstInputValue) * parseFloat(secondInputValue)).toString();
+            answer.innerText = answerValue
+        }
 
-    if (calculationMethod == '÷') {
-        answerValue = parseFloat(firstInputValue) / parseFloat(secondInputValue);
-        answer.innerText = answerValue
+        if (calculationMethod == '÷') {
+            answerValue = (parseFloat(firstInputValue) / parseFloat(secondInputValue)).toString();
+            answer.innerText = answerValue
+        }
     }
 }
 
