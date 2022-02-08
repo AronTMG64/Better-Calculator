@@ -1,6 +1,5 @@
 // Digits
 
-
 const clear = document.getElementById('clear');
 const backSpace = document.getElementById('backspace');
 const divide = document.getElementById('divide');
@@ -31,7 +30,6 @@ let firstInputValue = ''
 let secondInputValue = ''
 let calculationMethod = ''
 let answerValue = 0
-let backgroundColors = false
 
 // Functions
 
