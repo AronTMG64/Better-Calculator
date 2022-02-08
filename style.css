@@ -30,6 +30,8 @@ body{
     background-color: rgba(104, 104, 104, 0.25);
 }
 
+/* Output */
+
 #input-container{
     padding-right: 8px;
     height: 7rem;
@@ -53,6 +55,8 @@ body{
     align-items: center;
     height: 3rem;
 }
+
+/* Digits */
 
 #digits-container{
     width: 18rem;
@@ -96,49 +100,49 @@ body{
     width: 4.5rem;
     grid-area: divide;
 }
-#nine{
+#seven{
     width: 4.5rem;
-    grid-area: nine;
+    grid-area: seven;
 }
 #eight{
     width: 4.5rem;
     grid-area: eight;
 }
-#seven{
+#nine{
     width: 4.5rem;
-    grid-area: seven;
+    grid-area: nine;
 }
 #multiply{
     width: 4.5rem;
     grid-area: multiply;
 }
-#six{
+#four{
     width: 4.5rem;
-    grid-area: six;
+    grid-area: four;
 }
 #five{
     width: 4.5rem;
     grid-area: five;
 }
-#four{
+#six{
     width: 4.5rem;
-    grid-area: four;
+    grid-area: six;
 }
 #minus{
     width: 4.5rem;
     grid-area: minus;
 }
-#three{
+#one{
     width: 4.5rem;
-    grid-area: three;
+    grid-area: one;
 }
 #two{
     width: 4.5rem;
     grid-area: two;
 }
-#one{
+#three{
     width: 4.5rem;
-    grid-area: one;
+    grid-area: three;
 }
 #plus{
     width: 4.5rem;

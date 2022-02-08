@@ -1,3 +1,5 @@
+// Digits
+
 const clear = document.getElementById('clear');
 const backSpace = document.getElementById('backspace');
 const divide = document.getElementById('divide');
@@ -17,14 +19,19 @@ const zero = document.getElementById('zero');
 const decimal = document.getElementById('decimal');
 const equals = document.getElementById('equals');
 
+// Output
+
 const input = document.getElementById('input')
 const answer = document.getElementById('answer')
+
+// Values
 
 let firstInputValue = ''
 let secondInputValue = ''
 let calculationMethod = ''
-
 let answerValue = 0
+
+// Functions
 
 function clearFunction() {
     input.innerText = '';
@@ -295,7 +302,7 @@ function equalsFunction() {
     }
 }
 
-
+// AddEventListeners
 
 clear.addEventListener('click', function () {
     clearFunction()
