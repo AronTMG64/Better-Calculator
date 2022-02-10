@@ -1,4 +1,5 @@
 This is a calculator made in javascript. You can use your keyboard numpad too.
+
 controls:
 
 C = delete                                |
