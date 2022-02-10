@@ -305,7 +305,7 @@ function plusFunction() {
 function zeroFunction() {
     if (calculationMethod == '') {
         firstInputValue += 0;
-        input.innerText = firstInputValue + secondInputValue;
+        input.innerText = firstInputValue;
     } else {
         secondInputValue += 0;
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
@@ -332,22 +332,22 @@ function equalsFunction() {
     if (secondInputValue != '') {
         if (calculationMethod == ' + ') {
             answerValue = (parseFloat(firstInputValue) + parseFloat(secondInputValue)).toString();
-            answer.innerText = '=' + answerValue
+            answer.innerText = '= ' + answerValue
         }
 
         if (calculationMethod == ' - ') {
             answerValue = (parseFloat(firstInputValue) - parseFloat(secondInputValue)).toString();
-            answer.innerText = '=' + answerValue
+            answer.innerText = '= ' + answerValue
         }
 
         if (calculationMethod == ' x ') {
             answerValue = (parseFloat(firstInputValue) * parseFloat(secondInputValue)).toString();
-            answer.innerText = '=' + answerValue
+            answer.innerText = '= ' + answerValue
         }
 
         if (calculationMethod == ' ÷ ') {
             answerValue = (parseFloat(firstInputValue) / parseFloat(secondInputValue)).toString();
-            answer.innerText = '=' + answerValue454456
+            answer.innerText = '= ' + answerValue454456
         }
     }
 }
