@@ -22,7 +22,7 @@ body{
 }
 
 #calculator{
-    border: 2px solid rgb(122, 122, 122);
+    border: 3px solid rgb(122, 122, 122);
     border-radius: 8px;
     overflow: hidden;
     min-height: 25.3rem;
@@ -33,12 +33,12 @@ body{
 /* Output */
 
 #input-container{
-    padding-right: 8px;
+    padding: 5px 8px;
     min-height: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-bottom: 2px solid rgb(122, 122, 122);
+    border-bottom: 3px solid rgb(122, 122, 122);
 }
 
 #input{

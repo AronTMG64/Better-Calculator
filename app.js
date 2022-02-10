@@ -66,10 +66,10 @@ function divideFunction() {
             if (secondInputValue != '') {
                 firstInputValue = (parseFloat(firstInputValue) / parseFloat(secondInputValue)).toString();
                 secondInputValue = '';
-                calculationMethod = '÷'
+                calculationMethod = ' ÷ '
                 input.innerText = firstInputValue + calculationMethod + secondInputValue;
             } else {
-                calculationMethod = '÷'
+                calculationMethod = ' ÷ '
                 input.innerText = firstInputValue + calculationMethod + secondInputValue;
             }
         }
@@ -79,7 +79,7 @@ function divideFunction() {
             secondInputValue = ''
             firstInputValue = answerValue;
             answerValue = ''
-            calculationMethod = '÷'
+            calculationMethod = ' ÷ '
             input.innerText = firstInputValue + calculationMethod;
             answer.innerText = ''
         }
@@ -138,10 +138,10 @@ function multiplyFunction() {
             if (secondInputValue != '') {
                 firstInputValue = (parseFloat(firstInputValue) * parseFloat(secondInputValue)).toString();
                 secondInputValue = '';
-                calculationMethod = 'x'
+                calculationMethod = ' x '
                 input.innerText = firstInputValue + calculationMethod + secondInputValue;
             } else {
-                calculationMethod = 'x'
+                calculationMethod = ' x '
                 input.innerText = firstInputValue + calculationMethod + secondInputValue;
             }
         }
@@ -151,7 +151,7 @@ function multiplyFunction() {
             secondInputValue = ''
             firstInputValue = answerValue;
             answerValue = ''
-            calculationMethod = 'x'
+            calculationMethod = ' x '
             input.innerText = firstInputValue + calculationMethod;
             answer.innerText = ''
         }
@@ -210,10 +210,10 @@ function minusFunction() {
             if (secondInputValue != '') {
                 firstInputValue = (parseFloat(firstInputValue) - parseFloat(secondInputValue)).toString();
                 secondInputValue = '';
-                calculationMethod = '-'
+                calculationMethod = ' - '
                 input.innerText = firstInputValue + calculationMethod + secondInputValue;
             } else {
-                calculationMethod = '-'
+                calculationMethod = ' - '
                 input.innerText = firstInputValue + calculationMethod + secondInputValue;
             }
         }
@@ -223,7 +223,7 @@ function minusFunction() {
             secondInputValue = ''
             firstInputValue = answerValue;
             answerValue = ''
-            calculationMethod = '-'
+            calculationMethod = ' - '
             input.innerText = firstInputValue + calculationMethod;
             answer.innerText = ''
         }
@@ -281,10 +281,10 @@ function plusFunction() {
             if (secondInputValue != '') {
                 firstInputValue = (parseFloat(firstInputValue) + parseFloat(secondInputValue)).toString();
                 secondInputValue = '';
-                calculationMethod = '+'
+                calculationMethod = ' + '
                 input.innerText = firstInputValue + calculationMethod + secondInputValue;
             } else {
-                calculationMethod = '+'
+                calculationMethod = ' + '
                 input.innerText = firstInputValue + calculationMethod + secondInputValue;
             }
         }
@@ -294,7 +294,7 @@ function plusFunction() {
             secondInputValue = ''
             firstInputValue = answerValue;
             answerValue = ''
-            calculationMethod = '+'
+            calculationMethod = ' + '
             input.innerText = firstInputValue + calculationMethod;
             answer.innerText = ''
         }
@@ -330,24 +330,24 @@ function decimalFunction() {
 
 function equalsFunction() {
     if (secondInputValue != '') {
-        if (calculationMethod == '+') {
+        if (calculationMethod == ' + ') {
             answerValue = (parseFloat(firstInputValue) + parseFloat(secondInputValue)).toString();
-            answer.innerText = answerValue
+            answer.innerText = '=' + answerValue
         }
 
-        if (calculationMethod == '-') {
+        if (calculationMethod == ' - ') {
             answerValue = (parseFloat(firstInputValue) - parseFloat(secondInputValue)).toString();
-            answer.innerText = answerValue
+            answer.innerText = '=' + answerValue
         }
 
-        if (calculationMethod == 'x') {
+        if (calculationMethod == ' x ') {
             answerValue = (parseFloat(firstInputValue) * parseFloat(secondInputValue)).toString();
-            answer.innerText = answerValue
+            answer.innerText = '=' + answerValue
         }
 
-        if (calculationMethod == '÷') {
+        if (calculationMethod == ' ÷ ') {
             answerValue = (parseFloat(firstInputValue) / parseFloat(secondInputValue)).toString();
-            answer.innerText = answerValue
+            answer.innerText = '=' + answerValue454456
         }
     }
 }
