@@ -18,4 +18,4 @@ minus = numpad subtract / subtract        |
 plus = numpad add / add                   |
 0 = numpad 0 / 0                          |
 decimal = numpad decimal / decimalpoint   |
-equals = numpad enter / enter             
+equals = numpad enter / enter             |
