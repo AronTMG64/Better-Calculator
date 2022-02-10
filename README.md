@@ -1,8 +1,6 @@
 This is a calculator made in javascript. You can use your keyboard numpad too.
 controls:
 
-------------------------------------------
-                                          |
 C = delete                                |
 Backspace = Backspace                     |
 divide = numpad divide / slash            |
@@ -20,6 +18,4 @@ minus = numpad subtract / subtract        |
 plus = numpad add / add                   |
 0 = numpad 0 / 0                          |
 decimal = numpad decimal / decimalpoint   |
-equals = numpad enter / enter             |
-                                          |
-------------------------------------------
+equals = numpad enter / enter             
