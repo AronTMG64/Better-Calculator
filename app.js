@@ -304,10 +304,10 @@ function plusFunction() {
 
 function zeroFunction() {
     if (calculationMethod == '') {
-        if (firstInputValue != '') firstInputValue += 0;
+        firstInputValue += 0;
         input.innerText = firstInputValue + secondInputValue;
     } else {
-        if (secondInputValue != '') secondInputValue += 0;
+        secondInputValue += 0;
         input.innerText = firstInputValue + calculationMethod + secondInputValue;
     }
 }
